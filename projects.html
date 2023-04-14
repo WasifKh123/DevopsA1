@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS styling for the projects page */
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 0;
+            background-color: #f7f7f7;
+        }
+        .project {
+            width: 300px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.2s ease;
+        }
+        .project:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project .info {
+            padding: 20px;
+        }
+        .project h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .search-container {
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-container button {
+            width: 100%;
+            background-color: #47b2e4;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .search-container button:hover {
+            background-color: #3c8dc3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>My Portfolio</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for projects...">
+            <button id="search-button">Search</button>
+        </div>
+        <div class="project-list">
+            <div class="project">
+                <img src="pic1.jpg" alt="Project Image">
+                <div class="info">
+                    <h2>PSL Management System (C++,mysql)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ex vel nunc semper dignissim.</p>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="pic2.jpg" alt="Project Image">
+                <div class="info">
+                    <h2>FPS Game in VR (C#, unity3d, mysql)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ex vel nunc semper dignissim.</p>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="pic3.jpg" alt="Project Image">
+                <div class="info">
+                    <h2>PrivacyOps in Smart Cities(python, react, java script, mysql)</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec ex vel nunc semper dignissim.</p>
+                    <a href="#" class="button">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Wasif Khan</p>
+    </footer>
+
+</body>
+<script>
+    // Get the search input and button elements
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
+    
+    // Add an event listener to the button
+    searchButton.addEventListener("click", () => {
+      // Get the value of the search input
+      console.log("hello mwin wasid sda");
+      const searchTerm = searchInput.value.toLowerCase();
+  
+      // Get all project elements
+      const projects = document.querySelectorAll(".project");
+  
+      // Loop through each project element
+      projects.forEach(project => {
+        // Get the project title element
+        const projectTitle = project.querySelector("h2");
+  
+        // Check if the project title contains the search term
+        if (projectTitle.textContent.toLowerCase().includes(searchTerm)) {
+          // Show the project element
+          project.style.display = "block";
+        } else {
+          // Hide the project element
+          project.style.display = "none";
+        }
+      });
+    });
+</script>
+  
+</html> 
