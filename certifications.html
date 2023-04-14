@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Education</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional CSS styling for the education page */
+        .education {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .education h2 {
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+        .education p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+        .education ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .education li {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #47b2e4;
+            padding-left: 20px;
+            position: relative;
+        }
+        .education li:before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-color: #47b2e4;
+            border-radius: 50%;
+            position: absolute;
+            left: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .education li:last-child {
+            margin-bottom: 0;
+        }
+        .education li:last-child:before {
+            display: none;
+        }
+        .education li h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .education li p {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Education</h1>
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="education">
+            <h2>Certified Software Development Professional (CSDP)</h2>
+            <p>The CSDP certification is offered by the IEEE Computer Society and is designed for software engineers with at least four years of professional experience. This certification covers a wide range of topics including software design, testing, maintenance, and documentation. To obtain the CSDP certification, candidates must pass a rigorous exam and demonstrate their practical experience in software engineering.</p>
+            <br>
+            <br>
+
+            <h2>AWS Certified DevOps Engineer - Professional</h2>
+            <p>The AWS Certified DevOps Engineer - Professional certification is designed for software engineers who use the Amazon Web Services (AWS) platform to manage and deploy applications. This certification covers topics such as continuous integration and delivery, infrastructure as code, monitoring and logging, and security and compliance. To obtain this certification, candidates must have a minimum of two years of experience working with AWS and pass a rigorous exam.</p>
+
+
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Wasif Khan</p>
+    </footer>
+
+</body>
+                    
